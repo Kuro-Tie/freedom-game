@@ -25,12 +25,16 @@ func _add_score():#Adding score number when clicked the button
 func _Check_score_give_msg():#After checking score it gives messages if equals
 	if score_number == 10:
 		$Congrats_Label.text = "Good"
-		$Congrats_Label.show()
-		$Timer_For_Label_hide.start()#To Hide label it starts a timer
+		show_it_then_hide_it()
 	if score_number == 50:
 		$Congrats_Label.text = "You Know your stuff"
+		show_it_then_hide_it()
 	if score_number == 100:
 		$Congrats_Label.text = "Unbelievable"
+		show_it_then_hide_it()
+func show_it_then_hide_it():
+	$Congrats_Label.show()
+	$Timer_For_Label_hide.start()#To Hide label it starts a timer
 
 
 func hide_to_label():
