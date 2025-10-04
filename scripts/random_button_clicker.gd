@@ -1,6 +1,8 @@
 extends Node
 
+
 var score_number = 0 #Clicked Score number data variable
+
 
 func _ready():
 	$Congrats_Label.hide()
@@ -39,3 +41,8 @@ func show_it_then_hide_it():
 
 func hide_to_label():
 	$Congrats_Label.hide()#Hides the label
+
+
+func change_background():
+	var MY_list_background = ["res://assets/red_background.png","res://assets/orange_background.png","res://assets/yellow_blackground.png","res://assets/green_background.png","res://assets/blue_background.png","res://assets/purple_background.png"]
+	$Background.texture = load(MY_list_background.pick_random())
