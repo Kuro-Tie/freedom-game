@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://eom0g2je0wii"]
+
+[ext_resource type="AudioStream" uid="uid://bcj6rsgrl4xsn" path="res://assets/audio/funky-disco-155292.mp3" id="1_1udxr"]
+
+[node name="Background_Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_1udxr")
+autoplay = true

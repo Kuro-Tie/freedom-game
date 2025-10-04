@@ -14,3 +14,7 @@ config/name="Module-RandomClickTextureButton"
 run/main_scene="res://scenes/random_button_clicker.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Background_Music="*res://scenes/Background_Music.tscn"
