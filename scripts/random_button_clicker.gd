@@ -10,8 +10,8 @@ func _ready():
 
 func randomize_pos(): # this function change position of the ClickMe Button
 	randomize()
-	var randxpos = randi_range(0,1024)
-	var randypos = randi_range(0,524)
+	var randxpos = randi_range(0,$Background.size.x-128)#Adjust to screen position it gets numbers of background.
+	var randypos = randi_range(0,$Background.size.y-128)#Adjust to screen position it gets numbers of background.
 	$ClickMe.position = Vector2(randxpos,randypos)
 	$ClickMe.show()#show to player ClickMe button
 	$ChangePosition_Timer.start()
