@@ -18,10 +18,9 @@ func randomize_pos(): # this function change position of the ClickMe Button
 
 func changepos(): #When ChangePosition_Timer finishes this function works
 	randomize_pos()
-	_Check_score_give_msg()#After checking score it gives Messages.
 func _add_score():#Adding score number when clicked the button
 	score_number += 1
-
+	_Check_score_give_msg()#After checking score it gives Messages.
 	$Score_Number.text = "Love Score = " + str(score_number)
 	$ClickMe.hide()#hide if you clicked it so multiple clicks not hapen
 
