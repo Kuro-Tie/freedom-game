@@ -21,7 +21,8 @@ func changepos(): #When ChangePosition_Timer finishes this function works
 	_Check_score_give_msg()#After checking score it gives Messages.
 func _add_score():#Adding score number when clicked the button
 	score_number += 1
-	$Score_Number.text = "Score = " + str(score_number)
+	print(score_number)
+	$Score_Number.text = "Love Score = " + str(score_number)
 	$ClickMe.hide()#hide if you clicked it so multiple clicks not hapen
 
 func _Check_score_give_msg():#After checking score it gives messages if equals

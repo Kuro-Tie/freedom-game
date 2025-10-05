@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq0i6nnhamlmb"]
+[gd_scene load_steps=6 format=3 uid="uid://cq0i6nnhamlmb"]
 
 [ext_resource type="Script" uid="uid://cmnm36hp1bx3l" path="res://scripts/random_button_clicker.gd" id="1_b060s"]
 [ext_resource type="Texture2D" uid="uid://vi0l0jdllyeu" path="res://assets/red_background.png" id="2_4bdw1"]
 [ext_resource type="Texture2D" uid="uid://bg0p4cryqehhp" path="res://assets/asset.png" id="2_b060s"]
+[ext_resource type="FontFile" uid="uid://cb8jc1xlpjb7u" path="res://assets/fonts/Jacquard24-Regular.ttf" id="4_vyrnm"]
+
+[sub_resource type="Theme" id="Theme_vyrnm"]
 
 [node name="RandomButtonClicker" type="Node"]
 script = ExtResource("1_b060s")
@@ -14,6 +17,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4bdw1")
+
+[node name="Score_Number" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_vyrnm")
+theme_override_fonts/normal_font = ExtResource("4_vyrnm")
+text = "Love Score = 0"
 
 [node name="ChangePosition_Timer" type="Timer" parent="."]
 
@@ -34,15 +48,6 @@ grow_vertical = 2
 offset_right = 40.0
 offset_bottom = 40.0
 texture_normal = ExtResource("2_b060s")
-
-[node name="Score_Number" type="Label" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -1.0
-offset_bottom = 23.0
-grow_horizontal = 0
-text = "Score = 0"
 
 [node name="Timer_For_Label_hide" type="Timer" parent="."]
 wait_time = 2.0
